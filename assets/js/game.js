@@ -95,6 +95,11 @@ for(var i = 0; i < enemyInfo.length; i++) {
     
         // pass the pickedenemy.name variable's value into the fight function, where it will assume the value of the enemy.name parameter
         fight(pickedEnemyObj);
+    }
+     else {
+      window.alert("You have lost your robot in battle! Game Over!");
+      break;
+     }   
         
         if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
           // ask if user wants to use the store before next round
@@ -107,13 +112,10 @@ for(var i = 0; i < enemyInfo.length; i++) {
         }
       
       }
-      else {
-        window.alert("You have lost your robot in battle! Game Over!");
-        break;
-      }
+    
       
   }
-}
+
 var endGame = function() {
   // if player is still alive, player wins!
   if (playerInfo.health > 0) {
